@@ -5,16 +5,18 @@ const parolaUtente = prompt('Inserisci una parola per verificare se sia palindro
 isPalindromo(parolaUtente)
 
 // # Pari o dispari
-//     - Chiedere all'utente tramite prompt se sceglie pari o dispari e di scegliere un numero tra 1 e 5(ciclo while per verificare che le informazioni sia corrette)
+//     - Chiedere all'utente tramite prompt se sceglie pari o dispari e di scegliere un numero tra 1 e 5(ciclo while per verificare che le informazioni siano corrette)
 //     - Inizializzare due variabili con i singoli risultati dei due prompt
-let evenOddUser = prompt('Scegli tra pari o dispari')
-let numberUser = parseInt(prompt('Scegli un numero tra 1 e 5'))
-// do { evenOddUser = prompt('Scegli tra pari o dispari')
-//      numberUser = parseInt(prompt('Scegli un numero tra 1 e 5')) 
-// } while ((evenOddUser !== 'pari' || evenOddUser !== 'dispari')||(numberUser < 1 || numberUser > 5));
+// let evenOddUser = prompt('Scegli tra pari o dispari')
+// let numberUser = parseInt(prompt('Scegli un numero tra 1 e 5'))
 
-console.log(evenOddUser)
-console.log(numberUser)
+let evenOddUser
+let numberUser
+do { evenOddUser = prompt('Scegli tra pari o dispari')
+     numberUser = parseInt(prompt('Scegli un numero tra 1 e 5')) 
+     console.log(evenOddUser)
+    console.log(numberUser)
+} while ((evenOddUser !== 'pari' || evenOddUser !== 'dispari') && (numberUser < 1 || numberUser > 5) && isNaN(numberUser));
 
 //     - Creare una funzione che generi un numero casuale tra 1  e 5 per il computer e inizializzare una variabile con il risultato
 const computerRandomNumber = getRandomIntInclusive(1, 5)
