@@ -1,6 +1,6 @@
 // # Creare una funzione che controlli se una parola sia palindroma o meno
 //     - Inizializzare una variabile che sia il risultato di un prompt in cui viene chiesto all'utente di inserire una parola
-let parolaUtente = prompt('Inserisci una parola per verificare se sia palindroma')
+const parolaUtente = prompt('Inserisci una parola per verificare se sia palindroma')
 
 //     - Creare una funzione che controlli se la parola è palindroma
 //         - Creare una funzione
@@ -25,3 +25,20 @@ function isPalindromo(parola){
 }
 
 isPalindromo(parolaUtente)
+
+
+// # Pari o dispari
+//     - Chiedere all'utente tramite prompt se sceglie pari o dispari e di scegliere un numero tra 1 e 5(ciclo while per verificare che le informazioni sia corrette)
+//     - Inizializzare due variabili con i singoli risultati dei due prompt
+let evenOddUser
+let numberUser 
+do { evenOddUser = prompt('Scegli tra pari o dispari')
+     numberUser = parseInt(prompt('Scegli un numero tra 1 e 5')) 
+} while ((evenOddUser !== 'pari' || evenOddUser !== 'dispari')||(numberUser < 1 || numberUser > 5));
+
+console.log(evenOddUser)
+console.log(numberUser)
+
+//     - Creare una funzione che generi un numero casuale tra 1  e 5 per il computer 
+//     - Creare una funzione che sommi i due numeri e calcoli se la somma sia pari o dispari
+//     - Dichiare il vincitore
