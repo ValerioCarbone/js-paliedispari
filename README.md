@@ -13,3 +13,4 @@
     - Creare una funzione che generi un numero casuale tra 1  e 5 per il computer 
     - Creare una funzione che sommi i due numeri e calcoli se la somma sia pari o dispari
     - Dichiare il vincitore
+    
