@@ -4,6 +4,14 @@ const parolaUtente = prompt('Inserisci una parola per verificare se sia palindro
 
 isPalindromo(parolaUtente);
 
+if (isPalindromo(parolaUtente)) {
+    console.log(`La parola ${parolaUtente} è palindroma!`)
+}
+
+else {
+    console.log(`La parola ${parolaUtente} NON è palindroma!`)
+}
+
 // # Pari o dispari
 //     - Chiedere all'utente tramite prompt se sceglie pari o dispari e di scegliere un numero tra 1 e 5(ciclo while per verificare che le informazioni siano corrette)
 //     - Inizializzare due variabili con i singoli risultati dei due prompt
@@ -12,7 +20,7 @@ let evenOddUser;
 let numberUser;
 
 do {
-    evenOddUser = prompt('Scegli tra pari o dispari')
+    evenOddUser = prompt('Scegli tra pari o dispari').toLowerCase()
 } while ((evenOddUser !== 'pari' && evenOddUser !== 'dispari'))
 
 do {
@@ -28,11 +36,14 @@ const finalSum = numberUser + computerRandomNumber;
 console.log('La somma è: ' + finalSum);
 
 // Utilizzare una funzione che calcoli se la somma è pari o dispari
-const result = getOddEven(finalSum);
+const result = isEven(finalSum);
 
 //     - Dichiare il vincitore
 
-if ((result === true && evenOddUser === 'pari') || (result === false && evenOddUser === 'dispari')) {
+if (
+    (result === true && evenOddUser === 'pari') || 
+    (result === false && evenOddUser === 'dispari')) 
+    {
     console.log('Il vincitore è l\'utente')
 }
 else {
@@ -56,12 +67,14 @@ function isPalindromo(parola) {
     //             - Altrimenti stamperà che non è palindroma
 
     if (parola === parolaReversed) {
-        return console.log(`La parola ${parolaUtente} è palindroma!`)
+        return true
     }
     else {
-        return console.log(`La parola ${parolaUtente} NON è palindroma!`)
+        return false
     }
 }
+
+
 
 // Funzione che genera numero intero casuale  
 function getRandomIntInclusive(min, max) {
@@ -72,7 +85,7 @@ function getRandomIntInclusive(min, max) {
 
 //     - Creare una funzione che calcoli se la somma sia pari o dispari
 
-function getOddEven(sum) {
+function isEven(sum) {
     if (sum % 2 === 0) {
         return true
     }
