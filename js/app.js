@@ -47,7 +47,6 @@ function isPalindromo(parola) {
     //         - Creare un ciclo un cui la parola viene ciclata lettera per lettera in senso contrario e inserire il risultato in una variabile 
     let parolaReversed = ('')
     parola = parola.toLowerCase()
-    console.log(parola)
     for (let i = parola.length - 1; i >= 0; i--) {
         parolaReversed += parola[i]
     }
